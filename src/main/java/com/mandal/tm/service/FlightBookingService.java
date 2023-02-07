@@ -40,4 +40,5 @@ public class FlightBookingService {
         return new FlightBookingAcknowledgement("SUCCESS", paxInfo.getFare(), UUID.randomUUID().toString().split("-")[0], paxInfo);
 
     }
+    // Other details
 }
