@@ -33,5 +33,11 @@ public class ListSortingUserDefined {
         allPersons.stream().sorted(Comparator.comparing(Person::getFirstname).thenComparing(Person::getAge)).forEach(k -> {
             System.out.println("Id=" + k.getId() + " Name=" + k.getFirstname() + " Address=" + k.getAddress() + " Salary=" + k.getSalary() + " Age=" + k.getAge());
         });
+
+        System.out.println("################################");
+        // Sort by Name another way
+        allPersons.stream().sorted(Comparator.comparing(k -> k.getFirstname())).forEach(k -> {
+            System.out.println("Id=" + k.getId() + " Name=" + k.getFirstname() + " Address=" + k.getAddress() + " Salary=" + k.getSalary() + " Age=" + k.getAge());
+        });
     }
 }
