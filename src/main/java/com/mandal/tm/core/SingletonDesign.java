@@ -25,9 +25,10 @@ public class SingletonDesign extends SingletonDesignClone implements Serializabl
         return instance;
     }
 
-   protected Object readResolve(){
+    protected Object readResolve() {
         return instance;
-   }
+    }
+
     public static void main(String[] args) throws CloneNotSupportedException, InvocationTargetException, InstantiationException, IllegalAccessException, IOException, ClassNotFoundException {
         SingletonDesign singletonDesign = SingletonDesign.getInstance();
         System.out.println("Singleton Instance creade with hash code =" + singletonDesign.hashCode());
@@ -53,7 +54,7 @@ public class SingletonDesign extends SingletonDesignClone implements Serializabl
 
         //Deserialize singleton object from a file
         ObjectInput objectInput = new ObjectInputStream(new FileInputStream("Singleton.ser"));
-        SingletonDesign serializeObject  = (SingletonDesign)objectInput.readObject();
+        SingletonDesign serializeObject = (SingletonDesign) objectInput.readObject();
         objectInput.close();
         System.out.println("Serialization objected created with hash code = " + serializeObject.hashCode());
     }
