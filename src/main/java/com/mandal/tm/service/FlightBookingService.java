@@ -7,10 +7,11 @@ import com.mandal.tm.entity.PaymentInfo;
 import com.mandal.tm.repository.PassengerInfoRepository;
 import com.mandal.tm.repository.PaymentInfoRepository;
 import com.mandal.tm.utils.PaymentUtils;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import javax.transaction.Transactional;
+
 import java.util.UUID;
 
 @Service
