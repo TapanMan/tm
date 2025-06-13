@@ -47,7 +47,8 @@ public class FileUtility {
 
     public static void createDirectoryIfNotExist(String directoryPath) throws IOException {
         try {
-            if (!(Files.exists(Paths.get(directoryPath)))) {
+            Path pathDynamic = Paths.get(directoryPath);
+            if (!(Files.exists(pathDynamic))) {
                 Files.createDirectories(Paths.get(directoryPath));
             }
         } catch (IOException exception) {
